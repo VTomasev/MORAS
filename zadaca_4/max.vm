@@ -1,0 +1,33 @@
+function Max 3
+
+  push argument 0
+  push argument 1
+  gt
+  if-goto agtb
+  goto bgta
+  
+label agtb
+    push argument 0
+	push argument 2
+	gt
+	if-goto aa
+	goto cc
+  
+label bgta
+	push argument 1
+	push argument 2
+	gt
+	if-goto bb
+	goto cc
+
+label aa
+	push argument 0
+	return
+
+label bb
+	push argument 1
+	return
+
+label cc
+	push argument 2
+	return

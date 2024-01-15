@@ -1,0 +1,67 @@
+function BS 3
+
+push constant 0
+pop local 0
+
+push argument 1
+push constant 1
+sub
+pop local 1
+
+label loop
+push local 0
+push local 1
+gt
+if-goto endd
+
+push local 0
+push local 1 
+add
+push constant 2
+call div.Div 2
+pop local 2
+
+push local 2 
+push argument 0
+add
+
+pop pointer 1
+push that 0
+push argument 2
+eq
+if-goto thiss
+
+push local 2 
+push argument 0
+add
+pop pointer 1
+push that 0
+push argument 2
+gt
+if-goto high
+
+goto low
+
+
+label endd
+push constant 1 
+neg
+return
+
+label thiss
+push local 2 
+return
+
+label high
+push local 2
+push constant 1 
+sub 
+pop local 1
+goto loop
+
+label low
+push local 2
+push constant 1 
+add 
+pop local 0
+goto loop

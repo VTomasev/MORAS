@@ -1,0 +1,26 @@
+function Mod 2
+
+push constant 0
+pop local 0
+push argument 0
+pop local 1
+
+label llab 
+push local 1 
+push argument 1
+lt
+if-goto endd
+
+push local 0
+push constant 1 
+add
+pop local 0
+push local 1
+push argument 1
+sub
+pop local 1
+goto llab
+
+label endd
+push local 1
+return
