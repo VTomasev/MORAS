@@ -1,0 +1,11 @@
+class Main {
+
+    function void main() {
+        var Vint A, B;
+
+        let A = Vint.new(2);
+        let B = Vint.new(3);
+
+        return;
+    }
+}
